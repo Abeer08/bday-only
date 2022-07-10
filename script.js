@@ -4,8 +4,6 @@ const celeb_gif = document.getElementById('celeb_gif');
 const h1 = document.getElementsByTagName('h1')[0];
 celeb_gif.style.display = 'none';
 
-var bday_song = new Audio('Tanmay.mp3');
-
 div[0].addEventListener('click', ()=>{
     // Head or lid
     div[1].style.top = '-220px';
@@ -29,6 +27,10 @@ div[0].addEventListener('click', ()=>{
 
 function celebration(){
     celeb_gif.style.display = 'block';
-    var bday_song = new Audio('Anu.mp3');
+    var bday_song = new Audio('https://s3-us-west-2.amazonaws.com/1hbcf/Tanmay.mp3');
     bday_song.play();
 }
+
+// document.title = "Bday Only - "+username
+
+console.log(username3)
