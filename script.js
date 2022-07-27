@@ -27,10 +27,8 @@ div[0].addEventListener('click', ()=>{
 
 function celebration(){
     celeb_gif.style.display = 'block';
-    var bday_song = new Audio('https://s3-us-west-2.amazonaws.com/1hbcf/Anu.mp3');
+    var bday_song = new Audio('https://s3-us-west-2.amazonaws.com/1hbcf/Sonu.mp3');
     bday_song.play();
 }
 
 // document.title = "Bday Only - "+username
-
-console.log(username3)
