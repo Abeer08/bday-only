@@ -4,8 +4,8 @@ var inner_text = document.getElementById('inner-text');
 const celeb_gif = document.getElementById('celeb_gif');
 const h1 = document.getElementsByTagName('h1')[0];
 celeb_gif.style.display = 'none';
-const name1 = inner_text.slice((inner_text.indexOf('y')+2),(inner_text.indexOf('!')))
-console.log(name1)
+// const name1 = inner_text.slice((inner_text.indexOf('y')+2),(inner_text.indexOf('!')))
+console.log("Sumit")
 
 box.addEventListener('click', ()=>{
     // Head or lid
@@ -34,4 +34,4 @@ function celebration(){
     bday_song.play();
 }
 
-document.title = "Bday Only - "+name1
+document.title = "Bday Only - Sumit"
