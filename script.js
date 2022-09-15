@@ -33,4 +33,4 @@ function celebration(){
     bday_song.play();
 }
 
-// document.title = "Bday Only - "+username
+document.title = "Bday Only - "+name1
