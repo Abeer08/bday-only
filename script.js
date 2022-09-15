@@ -1,4 +1,5 @@
 const div = document.getElementsByTagName('div');
+const box = document.getElementsByClassName('box')[0];
 var inner_text = document.getElementById('inner-text');
 const celeb_gif = document.getElementById('celeb_gif');
 const h1 = document.getElementsByTagName('h1')[0];
@@ -6,7 +7,7 @@ celeb_gif.style.display = 'none';
 const name1 = inner_text.slice((inner_text.indexOf('y')+2),(inner_text.indexOf('!')))
 console.log(name1)
 
-div[0].addEventListener('click', ()=>{
+box.addEventListener('click', ()=>{
     // Head or lid
     div[1].style.top = '-220px';
     div[1].style.left = '220px';
