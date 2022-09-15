@@ -34,4 +34,4 @@ function celebration(){
     bday_song.play();
 }
 
-document.title = "Bday Only - Sumit"
+document.getElementsByTagName('title')[0].innerText = "Bday Only - Sumit"
