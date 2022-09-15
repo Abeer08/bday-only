@@ -7,7 +7,7 @@ celeb_gif.style.display = 'none';
 // const name1 = inner_text.slice((inner_text.indexOf('y')+2),(inner_text.indexOf('!')))
 console.log("Sumit")
 
-box.addEventListener('click', ()=>{
+div[0].addEventListener('click', (e)=>{
     // Head or lid
     div[1].style.top = '-220px';
     div[1].style.left = '220px';
