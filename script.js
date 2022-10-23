@@ -30,7 +30,7 @@ div[0].addEventListener('click', (e)=>{
 
 function celebration(){
     celeb_gif.style.display = 'block';
-    var bday_song = new Audio('https://s3-us-west-2.amazonaws.com/1hbcf/Sumit.mp3');
+    var bday_song = new Audio('https://s3-us-west-2.amazonaws.com/1hbcf/Amit.mp3');
     bday_song.play();
 }
 
