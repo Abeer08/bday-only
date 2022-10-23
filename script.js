@@ -5,6 +5,8 @@ const celeb_gif = document.getElementById('celeb_gif');
 const h1 = document.getElementsByTagName('h1')[0];
 celeb_gif.style.display = 'none';
 // const name1 = inner_text.slice((inner_text.indexOf('y')+2),(inner_text.indexOf('!')))
+
+
 console.log("Sumit")
 
 div[0].addEventListener('click', (e)=>{
