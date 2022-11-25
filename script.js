@@ -32,8 +32,8 @@ div[0].addEventListener('click', (e)=>{
 
 function celebration(){
     celeb_gif.style.display = 'block';
-    var bday_song = new Audio('https://s3-us-west-2.amazonaws.com/1hbcf/Amit.mp3');
+    var bday_song = new Audio('https://s3-us-west-2.amazonaws.com/1hbcf/Aviraj.mp3');
     bday_song.play();
 }
 
-document.getElementsByTagName('title')[0].innerText = "Bday Only - Amit"
+document.getElementsByTagName('title')[0].innerText = "Bday Only - Aviraj"
