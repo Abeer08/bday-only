@@ -5,9 +5,152 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <meta name="google-site-verification" content="Vm4-gKMLIORZyQtelonIBUwIMQ37NqNGHY2y8_ReSNQ" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+        html{
+            height: 150vh;
+        }
+
+        body{
+            background: linear-gradient(yellow, orange);
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .box{
+            position: absolute;
+            bottom: 0px;
+            height: 250px;
+            width: 250px;
+            left: 50%;
+            margin-left: -125px;
+            justify-content: center;
+        }
+
+        .body{
+            width: 250px;
+            height: 200px;
+            background-color: red;
+            position: absolute;
+            bottom: 40px;
+            /* transition: all 1.5s ease-out; */
+        }
+
+        .body-center{
+            position: relative;
+            width: 30px;
+            height: 200px;
+            background-color: yellow;
+            z-index: 10;
+            margin-left: 110px;
+            top: 0px;
+        }
+
+        .body-center::after{
+            background: yellow;
+            content: "";
+            height: 30px;
+            left: -40px;
+            position: absolute;
+            top: 70px;
+            width: 250px;
+            margin-left: -70px;
+        }
+
+
+        .shadow{
+            width: 250px;
+            height: 15px;
+            position: absolute;
+            top: 0px;
+            z-index: 11;
+            background-color: rgb(182, 0, 0);
+            transition: all 0.75s ease-out;
+            /* transition: all 1.5s ease-out; */
+        }
+
+        .shadow-center{
+            width: 30px;
+            height: 15px;
+            position: absolute;
+            margin-left: 110px;
+            top: 0px;
+            z-index: 12;
+            background-color: rgb(166, 166, 0);
+            transition: all 0.75s ease-out;
+        }
+
+        .head{
+            width: 285px;
+            height: 40px;
+            background-color: red;
+            position: absolute;
+            top: -40px;
+            z-index: 11;
+            left: -7.12%;
+            transition: all 1s ease-out;
+            /* justify-content: center; */
+        }
+
+        .head-center{
+            width: 30px;
+            height: 40px;
+            background-color: yellow;
+            position: absolute;
+            margin-left: 127.5px;
+            z-index: 11;
+        }
+
+        .text{
+            top: 10px;
+            position: relative;
+            text-align: center;
+            left: 5px;
+            transition: top ease-out 0.7s;
+            height: 0;
+        }
+
+        .text p{
+            color: red;
+            font-size: 2rem;
+            font-family: 'Great Vibes', cursive;
+            font-weight: bolder;
+            transition: font-size ease-out 0.7s;
+        }
+
+        /*.box:hover .head{
+            top: -220px;
+            left: 220px;
+            /* transform: rotateZ(60deg); */
+        /* } */
+
+        /* .box:hover .shadow{ */
+            /* background-color: red; */
+        /* } */
+
+        /* .box:hover .shadow-center{ */
+            /* background-color: yellow; */
+        /* } */
+
+        /* .box:hover .text{ */
+            /* top: -300px; */
+        /* } */
+
+        h1{
+            text-align: center;
+            color: red;
+            animation: updown 2s infinite
+        }
+
+        @keyframes updown{
+            50%{margin-top: 150px;}
+            100%{margin-top: 0;}
+        }
+    </style>
 </head>
 <body>
     <h1>Click this box 👇</h1>
@@ -27,6 +170,44 @@
         </div>
     </div>
     <img id="celeb_gif" src="celebration.gif" height="550px" width="420px">
-    <script src="/script.js"></script>
+    <script>
+        const div = document.getElementsByTagName('div');
+        const box = document.getElementsByClassName('box')[0];
+        var inner_text = document.getElementById('inner-text');
+        const celeb_gif = document.getElementById('celeb_gif');
+        const h1 = document.getElementsByTagName('h1')[0];
+        celeb_gif.style.display = 'none';
+        // const name1 = inner_text.slice((inner_text.indexOf('y')+2),(inner_text.indexOf('!')))
+        console.log("Veer")
+
+        div[0].addEventListener('click', (e)=>{
+            // Head or lid
+            div[1].style.top = '-220px';
+            div[1].style.left = '220px';
+            div[1].style.transform = 'rotateZ(60deg)';
+
+            // Dissappearing Shadow
+            div[4].style.backgroundColor = 'red';
+            div[5].style.backgroundColor = 'yellow';
+
+            // Heading 1
+            h1.style.display = 'none';
+
+            // Text
+            div[3].style.top = '-300px';
+            inner_text.style.fontSize = '2.5rem';
+
+            // if(bday_song.)
+            setTimeout(celebration, 1000);
+        }, {once: true})
+
+        function celebration(){
+            celeb_gif.style.display = 'block';
+            var bday_song = new Audio('https://s3-us-west-2.amazonaws.com/1hbcf/Veer.mp3');
+            bday_song.play();
+        }
+
+        document.getElementsByTagName('title')[0].innerText = "Bday Only - Veer"
+    </script>
 </body>
 </html>
